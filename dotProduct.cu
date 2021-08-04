@@ -1,4 +1,4 @@
-#include<iostream>
+/*#include<iostream>
 #include<cuda.h>
 #include<cuda_runtime.h>
 #include "device_launch_parameters.h"
@@ -92,4 +92,4 @@ int main()
 	delete [] h_b;
 	delete[] h_c;
 	return 911;
-}
+}*/
