@@ -1,4 +1,4 @@
-#include "cuda_runtime.h"
+/*#include "cuda_runtime.h"
 #include "device_launch_parameters.h"
 #include <stdio.h>
 #include <opencv2/core.hpp>
@@ -22,7 +22,7 @@ __global__ void kernel(unsigned char* d_img, int channels)
 	const float period=128.0f;
 	cache[threadIdx.x][threadIdx.y] = 255 * (sinf(x*2.0f*PI / period) + 1.0f) *(sinf(y*2.0f*PI / period) + 1.0f) / 4.0f;
 	__syncthreads();
-	if (tid < DIM*DIM)//just incase we launch man threads that tid>totalPixelsOnImg
+	if (tid < DIM*DIM)//just incase we launch many threads that tid>totalPixelsOnImg
 	{
 		d_img[tid * 3 + 0] = 0;
 		d_img[tid * 3 + 1] = cache[(totalThreads-1) - threadIdx.x][(totalThreads - 1) - threadIdx.y];
@@ -52,4 +52,4 @@ void main()
 	cv::waitKey();
 	cv::destroyAllWindows();
 	system("pause");
-}
+}*/
